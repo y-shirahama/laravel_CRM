@@ -12,4 +12,15 @@ class InertiaTestController extends Controller
     {
         return Inertia::render('Inertia/Index');
     }
+
+    /**
+     * @param $id
+     * @return \Inertia\Response
+     */
+    public function show($id)
+    {
+        return Inertia::render('Inertia/Show', [
+            'id' => $id
+        ]);
+    }
 }
